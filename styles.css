@@ -12,8 +12,7 @@ body {
 }
 
 a {
-    text-decoration: none;
-    color: #5865F2;
+    text-decoration: none;  
 }
 
 @keyframes wave {
@@ -75,28 +74,59 @@ a {
     padding-top: 20px;
 }
 
-.sub-title, .sub-note {
+.sub-title, .sub-note, .sub-card-info {
     font-size: 0.8em;
     margin: 10px 0 40px 0;
     color: #222;
     padding: 0 20px;
 }
 
+.sub-card-info {
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+}
 .sub-note {
     padding-top: 25px;
 }
 
-.cmd-card {
+.card-title {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 10px;
+    color: #000;
+    font-weight: bold;
+}
+
+.sub-card-title {
+    font-size: 1em;
+    margin: 0;
+    padding: 10px;
+    color: #000;
+    font-weight: bold;
+}
+
+.card {
     border: 1px solid #ddd;
     width: 90vw;
     max-width: 700px;
     padding: 20px;
     margin: 20px auto;
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sub-card {
+    border: 1px solid #ddd;
+    width: 70vw;
+    max-width: 550px;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-.cmd-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 8px rgba(255, 255, 255, 0.4);
+.sub-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 8px rgba(255, 255, 255, 0.5);
 }

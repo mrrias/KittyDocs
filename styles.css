@@ -70,7 +70,6 @@ button {
 .footer {
     text-align: center;
     padding: 15px 15px 10px 15px;
-    margin-bottom: 55px;
     background-color: rgba(255, 255, 255, 0.4);
     font-size: 1em;
     color: inherit;
@@ -85,8 +84,8 @@ button {
 .footer i {
     font-size: 2em;
     padding: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 /* MAIN CONTENT */

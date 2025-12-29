@@ -1,22 +1,30 @@
+/* BASE STYLES */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    /* Light Mode Gradient */
     background: linear-gradient(45deg, #FDC5F5, #F7AEF8, #B388EB, #8093F1, #99A9F4);
     background-size: 300% 300%;
     animation: wave 20s ease-in-out infinite;
     min-height: 100vh;
-
-    /* Only flex usage — footer positioning */
     display: flex;
     flex-direction: column;
+    color: #000;
+    /* Smooth theme transition for 2025 */
+    transition: background 0.8s ease, color 0.5s ease;
 }
 
-a {
-    text-decoration: none;
+/* DARK MODE OVERRIDE (Slightly Lighter/Softer Palette) */
+.dark-mode {
+    /* Replaced black with deep indigos and softer purples */
+    background: linear-gradient(45deg, #4A1E60, #6247AA, #3E49BB, #4A1E60, #2E1A47);
+    background-size: 300% 300%;
+    animation: wave 20s ease-in-out infinite;
+    color: #fff;
 }
 
-/* BACKGROUND ANIMATION */
+/* BACKGROUND ANIMATION - Shared by both modes */
 @keyframes wave {
     0% { background-position: 0% 0%; }
     50% { background-position: 100% 100%; }
@@ -25,6 +33,11 @@ a {
 
 /* HEADER */
 .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     text-align: center;
     padding: 3px 10px;
     background-color: rgba(255, 255, 255, 0.4);
@@ -33,6 +46,24 @@ a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     letter-spacing: 3px;
+    transition: background-color 0.5s ease;
+}
+
+.dark-mode .header {
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff;
+}
+
+button {
+    font-size: large;
+    background: transparent;
+    border: none;
+    padding: 30px;
+    margin: 0;
+    position: absolute;             
+    left: 5px;
+    cursor: pointer;
+    color: inherit;
 }
 
 /* FOOTER */
@@ -41,16 +72,24 @@ a {
     padding: 15px 15px 10px 15px;
     margin-bottom: 55px;
     background-color: rgba(255, 255, 255, 0.4);
-    font-size: 0.7em;
-    color: #000;
+    font-size: 1em;
+    color: inherit;
     margin-top: auto;
+    transition: background-color 0.5s ease;
+}
+
+.dark-mode .footer {
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .footer i {
     font-size: 2em;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-/* MAIN CONTENT — NO FLEX */
+/* MAIN CONTENT */
 .body {
     width: 100%;
     margin: 0 auto;
@@ -58,92 +97,78 @@ a {
     text-align: center;
 }
 
-/* CONTENT CONTAINER */
+/* GLASS CONTAINERS */
+.content, .card, .sub-card {
+    border: 1px solid rgba(221, 221, 221, 0.5);
+    border-radius: 15px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.3s ease;
+}
+
 .content {
-    border: 1px solid #ddd;
     width: calc(100% - 40px);
     max-width: 1100px;
     padding: 50px;
     padding-top: 0;
-    margin: 50px auto;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.005);
 }
 
-/* TITLES & TEXT */
-.title {
-    font-size: 2.5em;
-    margin-bottom: 0;
-    color: #000;
-    font-weight: bold;
-    padding: 0 20px;
-    padding-top: 20px;
-}
-
-.sub-title,
-.sub-note,
-.sub-card-info {
-    font-size: 0.8em;
-    margin: 10px 0 40px 0;
-    color: #222;
-    padding: 0 20px;
-}
-
-.sub-card-info {
-    padding-bottom: 15px;
-    margin: 0;
-    padding-top: 3px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.sub-note {
-    padding-top: 25px;
-}
-
-.card-title {
-    font-size: 1.5em;
-    margin: 0;
-    padding: 10px;
-    color: #000;
-    font-weight: bold;
-}
-
-.sub-card-title {
-    font-size: 1em;
-    margin: 0;
-    padding: 8px;
-    color: #000;
-    font-weight: bold;
-}
-
-/* CARDS — ALWAYS STACKED */
 .card {
-    border: 1px solid #ddd;
     width: 90%;
     max-width: 800px;
     padding: 40px;
     margin: 20px auto;
-    border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* SUB-CARDS — ALWAYS STACKED */
 .sub-card {
-    border: 1px solid #ddd;
     width: 90%;
     max-width: 550px;
     padding: 10px;
     margin: 20px auto;
-    border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* DARK MODE CONTAINER ADJUSTMENTS (Slightly more transparent) */
+.dark-mode .content, 
+.dark-mode .card, 
+.dark-mode .sub-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .sub-card:hover {
-    box-shadow:
-        0 4px 8px rgba(0, 0, 0, 0.1),
-        0 0 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 8px rgba(255, 255, 255, 0.5);
 }
+
+button {
+    color: white;
+    font-size: large;
+    background: transparent;
+    border: none;
+    padding: 30px;
+    margin: 0;
+    position: absolute;             
+    left: 5px;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* TITLES & TEXT */
+.title { font-size: 2.5em; margin-bottom: 0; font-weight: bold; padding: 20px 20px 0 20px; color: inherit; }
+.card-title { font-size: 1.5em; margin: 0; padding: 10px; font-weight: bold; color: inherit; }
+.sub-card-title { font-size: 1em; margin: 0; padding: 8px; font-weight: bold; color: inherit; }
+
+.sub-title, .sub-note, .sub-card-info {
+    font-size: 0.8em;
+    margin: 10px 0 40px 0;
+    padding: 0 20px;
+    color: inherit;
+}
+
+.sub-card-info { padding: 3px 30px 15px 30px; margin: 0; }
+.sub-note { padding-top: 25px; }
+
+a { text-decoration: none; color: inherit; }

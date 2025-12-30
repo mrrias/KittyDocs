@@ -113,6 +113,7 @@ button {
     max-width: 1100px;
     padding: 50px;
     padding-top: 0;
+    padding-bottom: 20px;
 }
 
 .card {
@@ -133,7 +134,7 @@ button {
 
 /* DARK MODE CONTAINER ADJUSTMENTS (Slightly more transparent) */
 .dark-mode .content, 
-.dark-mode .card, 
+.dark-mode .card,
 .dark-mode .sub-card {
     background-color: rgba(0, 0, 0, 0.2);
     border-color: rgba(255, 255, 255, 0.15);
@@ -141,7 +142,11 @@ button {
 }
 
 .sub-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .sub-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 button {
@@ -172,4 +177,41 @@ button {
 .sub-card-info { padding: 3px 30px 15px 30px; margin: 0; }
 .sub-note { padding-top: 25px; }
 
-a { text-decoration: none; color: inherit; }
+a { 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+a:hover {
+    opacity: 85%;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode a:hover {
+    opacity: 85%;
+    text-shadow: 0 4px 8px rgba(224, 224, 224, 0.3), 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.fa-github {
+    color: #000000; padding-right: 5px;
+}
+
+.fa-discord {
+    color: #3945cf; padding-right: 5px;
+}
+
+.fa-js {
+    color: #f0d000;
+}
+
+.dark-mode .fa-github {
+    color: #ffffff; padding-right: 5px;
+}
+
+.dark-mode .fa-discord {
+    color: #8690ff; padding-right: 5px;
+}
+
+.dark-mode .fa-js {
+    color: #ffe261;
+}

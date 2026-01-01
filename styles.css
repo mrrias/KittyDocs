@@ -1,217 +1,274 @@
 /* BASE STYLES */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    /* Light Mode Gradient */
-    background: linear-gradient(45deg, #FDC5F5, #F7AEF8, #B388EB, #8093F1, #99A9F4);
-    background-size: 300% 300%;
-    animation: wave 20s ease-in-out infinite;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    color: #000;
-    /* Smooth theme transition for 2025 */
-    transition: background 0.8s ease, color 0.5s ease;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Light Mode Gradient */
+  background: linear-gradient(
+    45deg,
+    #fdc5f5,
+    #f7aef8,
+    #b388eb,
+    #8093f1,
+    #99a9f4
+  );
+  background-size: 300% 300%;
+  animation: wave 20s ease-in-out infinite;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  /* Smooth theme transition for 2025 */
+  transition: background 0.8s ease, color 0.5s ease;
 }
 
 /* DARK MODE OVERRIDE (Slightly Lighter/Softer Palette) */
 .dark-mode {
-    /* Replaced black with deep indigos and softer purples */
-    background: linear-gradient(45deg, #4A1E60, #6247AA, #3E49BB, #4A1E60, #2E1A47);
-    background-size: 300% 300%;
-    animation: wave 20s ease-in-out infinite;
-    color: #fff;
+  /* Replaced black with deep indigos and softer purples */
+  background: linear-gradient(
+    45deg,
+    #4a1e60,
+    #6247aa,
+    #3e49bb,
+    #4a1e60,
+    #2e1a47
+  );
+  background-size: 300% 300%;
+  animation: wave 20s ease-in-out infinite;
+  color: #fff;
 }
 
 /* BACKGROUND ANIMATION - Shared by both modes */
 @keyframes wave {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 /* HEADER */
 .header {
-    display: flex;
-    margin-bottom: 80px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    padding: 3px 10px;
-    background-color: rgba(255, 255, 255, 0.4);
-    font-size: 1.2em;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    letter-spacing: 3px;
-    transition: background-color 0.5s ease;
+  display: flex;
+  margin-bottom: 80px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  padding: 3px 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  letter-spacing: 3px;
+  transition: background-color 0.5s ease;
 }
 
 .dark-mode .header {
-    background-color: rgba(0, 0, 0, 0.25);
-    color: #fff;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #fff;
 }
 
 button {
-    font-size: large;
-    background: transparent;
-    border: none;
-    padding: 30px;
-    margin: 0;
-    position: absolute;             
-    left: 5px;
-    cursor: pointer;
-    color: inherit;
+  font-size: large;
+  background: transparent;
+  border: none;
+  padding: 30px;
+  margin: 0;
+  position: absolute;
+  left: 5px;
+  cursor: pointer;
+  color: inherit;
 }
 
 /* FOOTER */
 .footer {
-    text-align: center;
-    padding: 15px 15px 10px 15px;
-    background-color: rgba(255, 255, 255, 0.4);
-    font-size: 1em;
-    color: inherit;
-    margin: 0px;
-    margin-top: 100px;
-    transition: background-color 0.5s ease;
+  text-align: center;
+  padding: 15px 15px 10px 15px;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-size: 1em;
+  color: inherit;
+  margin: 0px;
+  margin-top: 100px;
+  transition: background-color 0.5s ease;
 }
 
 .dark-mode .footer {
-    background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .footer i {
-    font-size: 2em;
-    padding: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+  font-size: 2em;
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 /* MAIN CONTENT */
 .body {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
 }
 
 /* GLASS CONTAINERS */
-.content, .card, .sub-card {
-    border: 1px solid rgba(221, 221, 221, 0.5);
-    border-radius: 15px;
-    margin: 50px auto;
-    background-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.3s ease;
+.content,
+.card,
+.sub-card {
+  border: 1px solid rgba(221, 221, 221, 0.5);
+  border-radius: 15px;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.5s ease, border-color 0.5s ease,
+    box-shadow 0.3s ease;
 }
 
 .content {
-    width: calc(100% - 40px);
-    max-width: 1100px;
-    padding: 50px;
-    padding-top: 0;
-    padding-bottom: 20px;
+  width: calc(100% - 40px);
+  max-width: 1100px;
+  padding: 50px;
+  padding-top: 0;
+  padding-bottom: 20px;
 }
 
 .card {
-    width: 90%;
-    max-width: 800px;
-    padding: 40px;
-    margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.3);
+  width: 90%;
+  max-width: 800px;
+  padding: 40px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .sub-card {
-    width: 90%;
-    max-width: 550px;
-    padding: 10px;
-    margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.3);
+  width: 90%;
+  max-width: 550px;
+  padding: 10px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* DARK MODE CONTAINER ADJUSTMENTS (Slightly more transparent) */
-.dark-mode .content, 
+.dark-mode .content,
 .dark-mode .card,
 .dark-mode .sub-card {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .sub-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .dark-mode .sub-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 8px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 button {
-    color: white;
-    font-size: large;
-    background: transparent;
-    border: none;
-    padding: 30px;
-    margin: 0;
-    position: absolute;             
-    left: 5px;
-    cursor: pointer;
-    color: inherit;
+  color: white;
+  font-size: large;
+  background: transparent;
+  border: none;
+  padding: 30px;
+  margin: 0;
+  position: absolute;
+  left: 5px;
+  cursor: pointer;
+  color: inherit;
 }
 
 /* TITLES & TEXT */
-.title { font-size: 2.5em; margin-bottom: 0; font-weight: bold; padding: 20px 20px 0 20px; color: inherit; }
-.card-title { font-size: 1.5em; margin: 0; padding: 10px; font-weight: bold; color: inherit; }
-.sub-card-title { font-size: 1em; margin: 0; padding: 8px; font-weight: bold; color: inherit; }
-
-.sub-title, .sub-note, .sub-card-info {
-    font-size: 0.8em;
-    margin: 10px 0 40px 0;
-    padding: 0 20px;
-    color: inherit;
+.title {
+  font-size: 2.5em;
+  margin-bottom: 0;
+  font-weight: bold;
+  padding: 20px 20px 0 20px;
+  color: inherit;
+}
+.card-title {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 10px;
+  font-weight: bold;
+  color: inherit;
+}
+.sub-card-title {
+  font-size: 1em;
+  margin: 0;
+  padding: 8px;
+  font-weight: bold;
+  color: inherit;
 }
 
-.sub-card-info { padding: 3px 30px 15px 30px; margin: 0; }
-.sub-note { padding-top: 25px; }
+.sub-title,
+.sub-note,
+.sub-card-info {
+  font-size: 0.8em;
+  margin: 10px 0 40px 0;
+  padding: 0 20px;
+  color: inherit;
+}
 
-a { 
-    text-decoration: none; 
-    color: inherit; 
+.sub-card-info {
+  display: none;
+}
+
+.sub-note {
+  padding-top: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
-    opacity: 85%;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
+  opacity: 85%;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .dark-mode a:hover {
-    opacity: 85%;
-    text-shadow: 0 4px 8px rgba(224, 224, 224, 0.3), 0 0 8px rgba(255, 255, 255, 0.4);
+  opacity: 85%;
+  text-shadow: 0 4px 8px rgba(224, 224, 224, 0.3),
+    0 0 8px rgba(255, 255, 255, 0.4);
 }
 
 .fa-github {
-    color: #000000; padding-right: 5px;
+  color: #000000;
+  padding-right: 5px;
 }
 
 .fa-discord {
-    color: #3945cf; padding-right: 5px;
+  color: #3945cf;
+  padding-right: 5px;
 }
 
 .fa-js {
-    color: #f0d000;
+  color: #f0d000;
 }
 
 .dark-mode .fa-github {
-    color: #ffffff; padding-right: 5px;
+  color: #ffffff;
+  padding-right: 5px;
 }
 
 .dark-mode .fa-discord {
-    color: #8690ff; padding-right: 5px;
+  color: #8690ff;
+  padding-right: 5px;
 }
 
 .dark-mode .fa-js {
-    color: #ffe261;
+  color: #ffe261;
+}
+
+.appear {
+  display: contents;
 }

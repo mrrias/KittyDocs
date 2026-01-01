@@ -1,227 +1,195 @@
-
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kitty Docs</title>
 
-    <head>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kitty Docs</title>
+  <body>
+    <div id="bodyContent">
+      <!-- Header -->
+      <div class="header">
+        <button id="mode"><i class="fab fa-hashnode"></i></button>
+        <p>Kitty Discord Bot</p>
+      </div>
 
-        <!-- Link to CSS -->
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <!-- Content -->
+      <div class="content">
+        <div class="body">
+          <h1 class="title">Documentation</h1>
+          <p class="sub-title">
+            Welcome to Kitty Docs <br /><br />
+            Find out more below by clicking on any feilds that interest you.<br />
+            Also feel free to check us out on discord
+          </p>
 
-    </head>
+          <!-- About Card -->
+          <div class="card">
+            <h2 class="card-title">About Me</h2>
 
-    <body>
+            <!-- Who Am I -->
+            <div class="sub-card">
+              <h2 class="sub-card-title">Who am I ?</h2>
 
-        <div id="bodyContent">
-
-            <div class="header">
-                <button id="mode"><i class="fab fa-hashnode"></i></button>
-                <p>
-                    Kitty Discord Bot
-                </p>
+              <p class="sub-card-info">
+                I am just a guy who likes to make stuff... <br />
+                <strong>Kitty</strong> is one of my many random projects I
+                built. <br /><br />
+                As of current the bot is not deployed... meaning it will not be
+                running 24/7 <br />
+                In order to use <strong>Kitty</strong> it must be open and
+                running on my machine <br /><br />
+                <i>as of publication of this website</i>
+              </p>
             </div>
 
-            <div class="content">
+            <!-- What's New -->
+            <div class="sub-card">
+              <h2 class="sub-card-title">What's New ?</h2>
 
-                <div class="body">
-
-                    <h1 class="title">
-                        Documentation
-                    </h1>
-                    <p class="sub-title">
-                        Welcome to Kitty Docs <br><br>
-                        Find out more about our commands below <br>
-                        also feel free to join us on discord
-                    </p>
-
-                    <!-- about -->
-                    <div class="card">
-
-                        <h2 class="card-title">
-                            About Me
-                        </h2>
-
-                        <div class="sub-card">
-
-                            <h2 class="sub-card-title">
-                                Who am I ?
-                            </h2>
-
-                            <p class="sub-card-info">
-                                I am just a guy who likes to make stuff... <br>
-                                <strong>Kitty</strong> is one of my many random projects and runs using discord.js <br><br>
-                                As of current the bot is not deployed meaning it will not be running 24/7 <br>
-                                In order to use <strong>Kitty</strong> it must be open and running on my machiene <br><br>
-                                <i>as of publication date of this website</i>
-                            </p>
-
-                        </div>
-
-                        <div class="sub-card">
-
-                            <h2 class="sub-card-title">
-                                Projects ?
-                            </h2>
-
-                            <p class="sub-card-info">
-                                I am currently working on two main projects... <br><br>
-                                - <strong>Kitty</strong> <br>
-                                - <strong>Kitty Docs</strong> <br><br>
-                                These projects use <strong>JavaScript</strong>, <strong>HTML</strong> and <strong>CSS</strong> <br>
-                                These are used to create the Website you are on right not <br>
-                                and the Discord bot which these docs are for <br><br>
-                                <i>Find all code in my Github</i>
-                            </p>
-                            
-                        </div>
-
-                        <div class="sub-card">
-
-                            <h2 class="sub-card-title">
-                                More About Kitty ?
-                            </h2>
-
-                            <p class="sub-card-info">
-                                <strong>Kitty</strong> is my own Discord bot that runs using JavaScript <br>
-                                paired with the discord.js library to create a working bot <br><br>
-                                As of current this bot is <strong>not</strong> deployed ! <br>
-                                <i>Meaning bot <strong>will not run</strong> unless open and running on my machiene</i>
-                            </p>
-                            
-                        </div>
-
-                        <div class="sub-card">
-
-                            <h2 class="sub-card-title">
-                                Find Out More
-                            </h2>
-
-                            <p class="sub-card-info">
-                                You can find my code in my <strong>Github</strong> <br>
-                                You can also join my development <strong>Discord server</strong> to see what I am working on next <br><br>
-                                <i>All links can be found at the bottom of the page</i>
-                            </p>
-                            
-                        </div>
-                        
-                    </div>
-
-                    <!-- actions cmds -->
-                    <div class="card">
-
-                        <h2 class="card-title">
-                            Action Commands
-                        </h2>
-
-                        <!-- Command info card -- /actions -->
-                        <div class="sub-card">
-                            
-                            <h2 class="sub-card-title">
-                                /actions
-                            </h2>
-
-                            <p class="sub-card-info">
-                                The <strong>/actions</strong> command allows users to pick an action to display. <br>
-                                These actions can be done to themeselve or they have to option to apply them to another user
-                            </p>
-                        </div>
-
-                        <!-- Command info card -- /math -->
-                        <div class="sub-card">
-                            
-                            <h2 class="sub-card-title">
-                                /math
-                            </h2>
-
-                            <p class="sub-card-info">
-                                Users may input two numbers into <strong>/math</strong> command and chose a basic operator. <br>
-                                Kitty will then output the result!
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <!-- fun cmds -->
-                    <div class="card">
-
-                        <h2 class="card-title">
-                            Fun Commands
-                        </h2>
-
-                        <!-- Command info card -- /bean -->
-                        <div class="sub-card">
-                            
-                            <h2 class="sub-card-title">
-                                /bean
-                            </h2>
-
-                            <p class="sub-card-info">
-                                <strong>/bean</strong> is a fun fake ban command. <br><br>
-                                <i>Still working on this command</i>
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <!-- love cmds -->
-                    <div class="card">
-
-                        <h2 class="card-title">
-                            Love Commands
-                        </h2>
-
-                        <!-- Command info card -- /boop -->
-                        <div class="sub-card">
-                            
-                            <h2 class="sub-card-title">
-                                /boop
-                            </h2>
-
-                            <p class="sub-card-info">
-                                <strong>/boop</strong> is exactly as it sounds... <br>
-                                It allows users to <i>boop</i> other users.
-                            </p>
-                        </div>
-
-                        <!-- Command info card -- /hug -->
-                        <div class="sub-card">
-                            
-                            <h2 class="sub-card-title">
-                                /hug
-                            </h2>
-
-                            <p class="sub-card-info">
-                                <strong>/hug</strong> allows users to give out hugs
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <p class="sub-note">
-                        <strong>
-                            Links can be found at the bottom of the page!
-                        </strong>
-                    </p>
-
-                </div>
-            
+              <p class="sub-card-info">
+                I am always working towards new updates, features and so much
+                more for this project. <br />
+                This is a solo project as of current, but I do my best to keep
+                updating the bot and the docs... <br /><br />
+                <strong>So What Has Changed Recently?</strong> <br />
+                - Collapsing Docs Cards <br />
+                - Gifs Have Been Added <br />
+                - Embeds Have Been Added <br />
+                - And Bot Commands Updated And Improved <br /><br />
+                <i>More updates still to come...</i>
+              </p>
             </div>
 
-            <div class="footer">
-                <p>
-                    <a href="https://github.com/mrrias" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://discord.gg/vgY3Xjxpud" target="_blank"><i class="fab fa-discord"></i></a>
-                    <a href="https://discord.js.org/" target="_blank"><i class="fab fa-js"></i></a>
-                </p>
+            <!-- More About Kitty -->
+            <div class="sub-card">
+              <h2 class="sub-card-title">More About Kitty ?</h2>
+
+              <p class="sub-card-info">
+                <strong>Kitty</strong> is my own Discord bot that runs using
+                JavaScript paired with the discord.js library to create a
+                working bot with rich features <br /><br />
+                As of current this bot is <strong>not</strong> deployed ! <br />
+                <i
+                  >Meaning bot <strong>will not run</strong> unless open and
+                  running on my machiene</i
+                >
+              </p>
             </div>
+
+            <!-- Find Out More-->
+            <div class="sub-card">
+              <h2 class="sub-card-title">Find Out More</h2>
+
+              <p class="sub-card-info">
+                You can find my code in my <strong>Github</strong> <br />
+                You can also join my development
+                <strong>Discord server</strong> to see what I am working on next
+                <br /><br />
+                <i>All links can be found at the bottom of the page</i>
+              </p>
+            </div>
+          </div>
+
+          <!-- Action Card -->
+          <div class="card">
+            <h2 class="card-title">Action Commands</h2>
+
+            <!-- /actions -->
+            <div class="sub-card">
+              <h2 class="sub-card-title">/actions</h2>
+
+              <p class="sub-card-info">
+                The <strong>/actions</strong> command allows users to pick an
+                action to display. <br />
+                These actions can be done to themeselve or they have to option
+                to apply them to another user
+              </p>
+            </div>
+
+            <!-- /math -->
+            <div class="sub-card">
+              <h2 class="sub-card-title">/math</h2>
+
+              <p class="sub-card-info">
+                Users may input two numbers into <strong>/math</strong> command
+                and chose a basic operator. <br />
+                Kitty will then output the result!
+              </p>
+            </div>
+          </div>
+
+          <!-- Fun Card -->
+          <div class="card">
+            <h2 class="card-title">Fun Commands</h2>
+
+            <!-- /bean -->
+            <div class="sub-card">
+              <h2 class="sub-card-title">/bean</h2>
+
+              <p class="sub-card-info">
+                <strong>/bean</strong> is a fun fake ban command. <br /><br />
+                <i>Still working on this command</i>
+              </p>
+            </div>
+          </div>
+
+          <!-- love cmds -->
+          <div class="card">
+            <h2 class="card-title">Love Commands</h2>
+
+            <!-- /boop -->
+            <div class="sub-card">
+              <h2 class="sub-card-title">/boop</h2>
+
+              <p class="sub-card-info">
+                <strong>/boop</strong> is exactly as it sounds... <br />
+                It allows users to <i>boop</i> other users.
+              </p>
+            </div>
+
+            <!-- /hug -->
+            <div class="sub-card">
+              <h2 class="sub-card-title">/hug</h2>
+
+              <p class="sub-card-info">
+                <strong>/hug</strong> allows users to give out hugs
+              </p>
+            </div>
+          </div>
+
+          <!-- Sub Note -->
+          <p class="sub-note">
+            <strong> Links can be found at the bottom of the page! </strong>
+          </p>
         </div>
+      </div>
 
-        <script src="main.js"></script>
-    </body>
+      <!-- Footer -->
+      <div class="footer">
+        <p>
+          <a href="https://github.com/mrrias" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://discord.gg/vgY3Xjxpud" target="_blank"
+            ><i class="fab fa-discord"></i
+          ></a>
+          <a href="https://discord.js.org/" target="_blank"
+            ><i class="fab fa-js"></i
+          ></a>
+        </p>
+      </div>
+    </div>
 
+    <!-- Link JavaScript -->
+    <script src="main.js"></script>
+  </body>
 </html>
-

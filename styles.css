@@ -236,6 +236,10 @@ button {
   display: none;
 }
 
+.card-content {
+  display: none;
+}
+
 .sub-note {
   padding-top: 25px;
 }

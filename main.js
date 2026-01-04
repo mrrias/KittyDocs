@@ -23,7 +23,8 @@ cards.forEach((card) => {
 const subCards = document.querySelectorAll(".sub-card");
 
 subCards.forEach((sub_card) => {
-  sub_card.addEventListener("click", () => {
+  sub_card.addEventListener("click", (event) => {
+    event.stopPropagation();
     const info = sub_card.querySelector(".sub-card-info");
 
     if (info) {

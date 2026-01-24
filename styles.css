@@ -19,7 +19,9 @@ body {
   flex-direction: column;
   color: #000;
   /* Smooth theme transition for 2025 */
-  transition: background 0.8s ease, color 0.5s ease;
+  transition:
+    background 0.8s ease,
+    color 0.5s ease;
 }
 
 /* DARK MODE OVERRIDE (Slightly Lighter/Softer Palette) */
@@ -69,6 +71,11 @@ body {
   transition: background-color 0.5s ease;
 }
 
+.docs-title {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
 .dark-mode .header {
   background-color: rgba(0, 0, 0, 0.25);
   color: #fff;
@@ -76,7 +83,7 @@ body {
 
 button {
   position: absolute;
-  left: 5px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
   font-size: large;
@@ -88,16 +95,15 @@ button {
   color: inherit;
 }
 
-.kitty-logo {
+.shiro-logo {
   position: absolute;
-  right: 20px;
+  right: 25px;
   top: 50%;
   transform: translateY(-50%);
   object-fit: scale-down;
-  width: 35px;
+  width: 40px;
   height: auto;
   margin: 0;
-  opacity: 85%;
   border-radius: 50%;
 }
 
@@ -141,7 +147,9 @@ button {
   margin: 50px auto;
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: background-color 0.5s ease, border-color 0.5s ease,
+  transition:
+    background-color 0.5s ease,
+    border-color 0.5s ease,
     box-shadow 0.3s ease;
 }
 
@@ -179,12 +187,16 @@ button {
 }
 
 .sub-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 0 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
 .dark-mode .sub-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 8px rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 button {
@@ -251,12 +263,15 @@ a {
 
 a:hover {
   opacity: 85%;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
+  text-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .dark-mode a:hover {
   opacity: 85%;
-  text-shadow: 0 4px 8px rgba(224, 224, 224, 0.3),
+  text-shadow:
+    0 4px 8px rgba(224, 224, 224, 0.3),
     0 0 8px rgba(255, 255, 255, 0.4);
 }
 
